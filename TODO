@@ -1,0 +1,25 @@
+
+Todo:
+  ☐ Figure out how to get the stock data.
+    From Jan 1st 2006 to Jan 1st 2016 for each bank
+  ☐ Set each bank to be a separate dataframe, with the variable name for that bank being its ticker symbol. This will involve a few steps:**
+    1. Use datetime to set start and end datetime objects.
+    2. Figure out the ticker symbol for each bank.
+    3. Figure out how to use datareader to grab info on the stock.
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
+  ☐
