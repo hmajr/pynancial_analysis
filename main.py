@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # Set search datetime
     start_time = datetime(2010, 1, 4)
     end_time = datetime(2019, 1, 1)
-    pinrt(" == DATA UTILIZADAS ==")
+    print(" == DATA UTILIZADAS ==")
     print("Data inicio: {} \n Data fim: {}".format(start_time, end_time))
 
     ## SERVIDOR
