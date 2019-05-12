@@ -137,4 +137,9 @@ if __name__ == "__main__":
     plt.legend()
     plt.show()
 
+    ## Interative Heatmap stock correlation
+    bank_stocks.xs(key="Close", axis=1, level=1).corr().iplot(
+        kind="heatmap", colorscale='rdylbu')
+    plt.show()
+
     
