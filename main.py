@@ -12,6 +12,7 @@ if __name__ == "__main__":
 
     # Optional Plotly Method Imports
     import plotly.plotly
+    plotly.tools.set_credentials_file(username="hmajr", api_key="H9q8iDo6taiqDURM445u")
     import cufflinks as cf
     cf.go_offline()
     print(" DONE!!!\n")
