@@ -116,4 +116,13 @@ if __name__ == "__main__":
     ## Interative close price stocks
     bank_stocks.xs(key="Close", axis=1, level=1).iplot()
 
+    ## interative MMA plot
+    sns.set(style="whitegrid")
+    bank_stocks["BAC"]["Close"].loc["2011-01-01":"2011-12-31"].rolling(
+        window=30).mean().plot(label="MMA 30")
+    bank_stocks["BAC"]["Close"].loc["2011-01-01":"2011-12-31"].plot(
+        label="BAC CLOSE", color="green")
+    plt.legend()
+    plt.show()
+
     
