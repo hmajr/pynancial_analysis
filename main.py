@@ -142,4 +142,13 @@ if __name__ == "__main__":
         kind="heatmap", colorscale='rdylbu')
     plt.show()
 
+    ## Interative Candle graph
+    bank_stocks["BAC"].loc["2015-01-01":"2016-01-01"].iplot(kind="candle")
+    plt.show()
+
+    ## Interactive MMA graph plot
+    bank_stocks["MS"]["Close"].loc["2015-01-01":
+                                   "2015-12-31"].ta_plot(study="sma")
+    plt.show()
+
     
