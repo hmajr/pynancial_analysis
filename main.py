@@ -70,4 +70,18 @@ if __name__ == "__main__":
     print("\n== Max close price ==\n")
     print(bank_stocks.xs(key="Close", axis=1, level="Stock Info").max())
 
+    #Percent return
+    print("\n == Bank price returns ==\n")
+    returns = pd.DataFrame()
+    bank_stocks_pct = bank_stocks
+
+    for ticker in tickers:
+        bank_stocks_pct[ticker, "Return"] = bank_stocks[ticker].xs(
+            key="Close", axis=1).pct_change()
+    banks_returns = bank_stocks_pct.xs(key="Return", axis=1, level=1)
+    print(banks_returns.head())
+
+    sns.pairplot(data=banks_returns[1:])
+    plt.show()
+
     

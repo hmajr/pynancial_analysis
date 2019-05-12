@@ -14,8 +14,8 @@ Todo:
   ✔ Check the head of the bank_stocks dataframe @done(19-05-12 04:12)
   EDA
   ✔ What is the max Close price for each bank's stock throughout the time period? @done(19-05-12 04:12)
-  ☐ Create a new empty DataFrame called returns.
-  ☐ This dataframe will contain the returns for each bank's stock. returns are typically defined by:
+  ✔ Create a new empty DataFrame called returns. @done(19-05-12 04:13)
+  ✔ This dataframe will contain the returns for each bank's stock. returns are typically defined by: @done(19-05-12 04:13)
   ☐ We can use pandas pct_change() method on the Close column to create a column representing this return value.
   ☐ Create a for loop that goes and for each Bank Stock Ticker creates this returns column and set's it as a column in the returns DataFrame
   ☐  Create a pairplot using seaborn of the returns dataframe. What stock stands out to you?
