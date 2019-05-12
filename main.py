@@ -113,3 +113,7 @@ if __name__ == "__main__":
     plt.legend()
     plt.show()
 
+    ## Interative close price stocks
+    bank_stocks.xs(key="Close", axis=1, level=1).iplot()
+
+    
