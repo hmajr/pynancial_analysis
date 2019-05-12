@@ -95,17 +95,20 @@ if __name__ == "__main__":
     print(banks_returns.std())
 
     ## Distribuicao normal Morgan Stanley
+    print("\n == Distribuicao normal Morgan Stanley ==\n")
     sns.set(style="whitegrid")
     sns.distplot(banks_returns["2015-01-01":"2015-12-31"]["MS"],
                  bins=100, color="green")
     plt.show()
 
     ## Distribuicao normal City Bank
+    print("\n == Distribuicao normal City Bank ==\n")
     sns.distplot(banks_returns["2011-01-01":"2011-12-31"]["C"],
                  color="red", bins=100)
     plt.show()
 
     ## Plot stock close prices
+    print("\n == Grafico Preco Fechamento ==\n")
     sns.set(style="whitegrid", rc={'figure.figsize': (13, 7)})
     for ticker in tickers:
         bank_stocks[ticker]["Close"].plot(
@@ -114,9 +117,11 @@ if __name__ == "__main__":
     plt.show()
 
     ## Interative close price stocks
+    print("\n == Grafico Interativo Preco Fechamento ==\n")
     bank_stocks.xs(key="Close", axis=1, level=1).iplot()
 
     ## interative MMA plot
+    print("\n == Grafico Interativo Media Movel ==\n")
     sns.set(style="whitegrid")
     bank_stocks["BAC"]["Close"].loc["2011-01-01":"2011-12-31"].rolling(
         window=30).mean().plot(label="MMA 30")
@@ -126,32 +131,38 @@ if __name__ == "__main__":
     plt.show()
 
     ## Heatmap stock correlation
+    print("\n == Grafico Heatmap Correlacao Preco Fechamento ==\n")
     sns.heatmap(bank_stocks.xs(key="Close", axis=1, level=1).corr(),
                 annot=True, cmap="rocket_r")
     plt.legend()
     plt.show()
 
     ## Cluster stock correlation
+    print("\n == Grafico Cluster Correlacao Preco Fechamento ==\n")
     sns.clustermap(bank_stocks.xs(key="Close", axis=1,
                                   level=1).corr(), annot=True, cmap="rocket_r")
     plt.legend()
     plt.show()
 
     ## Interative Heatmap stock correlation
+    print("\n == Grafico Heatmap interativo ==\n")
     bank_stocks.xs(key="Close", axis=1, level=1).corr().iplot(
         kind="heatmap", colorscale='rdylbu')
     plt.show()
 
     ## Interative Candle graph
+    print("\n == Grafico Candlestick ==\n")
     bank_stocks["BAC"].loc["2015-01-01":"2016-01-01"].iplot(kind="candle")
     plt.show()
 
     ## Interactive MMA graph plot
+    print("\n == Grafico Media Movel Interativo ==\n")
     bank_stocks["MS"]["Close"].loc["2015-01-01":
                                    "2015-12-31"].ta_plot(study="sma")
     plt.show()
 
     ## Interactive Bollinger`s Band graph
+    print("\n == Grafico Banda Bollinger Interativo ==\n")
     bank_stocks["BAC"]["Close"].loc["2015-01-01":
                                     "2015-12-31"].ta_plot(study="boll", color="red")
     plt.show()
