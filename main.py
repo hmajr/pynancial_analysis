@@ -151,4 +151,7 @@ if __name__ == "__main__":
                                    "2015-12-31"].ta_plot(study="sma")
     plt.show()
 
-    
+    ## Interactive Bollinger`s Band graph
+    bank_stocks["BAC"]["Close"].loc["2015-01-01":
+                                    "2015-12-31"].ta_plot(study="boll", color="red")
+    plt.show()
