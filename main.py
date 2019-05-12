@@ -125,4 +125,16 @@ if __name__ == "__main__":
     plt.legend()
     plt.show()
 
+    ## Heatmap stock correlation
+    sns.heatmap(bank_stocks.xs(key="Close", axis=1, level=1).corr(),
+                annot=True, cmap="rocket_r")
+    plt.legend()
+    plt.show()
+
+    ## Cluster stock correlation
+    sns.clustermap(bank_stocks.xs(key="Close", axis=1,
+                                  level=1).corr(), annot=True, cmap="rocket_r")
+    plt.legend()
+    plt.show()
+
     
