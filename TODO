@@ -21,7 +21,7 @@ Todo:
   ✔  Create a pairplot using seaborn of the returns dataframe. What stock stands out to you? @done(19-05-12 04:18)
     Can you figure out why?
   ☐ Using this returns DataFrame, figure out on what dates each bank stock had the best and worst single day returns
-    ☐ ou should notice that 4 of the banks share the same day for the worst drop, did anything significant happen that day?
+    You should notice that 4 of the banks share the same day for the worst drop, did anything significant happen that day?
   ☐ You should have noticed that Citigroup's largest drop and biggest gain were very close to one another, did anythign significant happen in that time frame?
   ☐ Take a look at the standard deviation of the returns, which stock would you classify as the riskiest over the entire time period?
     ☐ Which would you classify as the riskiest for the year 2015?

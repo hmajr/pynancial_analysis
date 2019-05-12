@@ -100,10 +100,16 @@ if __name__ == "__main__":
                  bins=100, color="green")
     plt.show()
 
-    ##
+    ## Distribuicao normal City Bank
     sns.distplot(banks_returns["2011-01-01":"2011-12-31"]["C"],
                  color="red", bins=100)
     plt.show()
 
+    ## Plot stock close prices
+    sns.set(style="whitegrid", rc={'figure.figsize': (13, 7)})
+    for ticker in tickers:
+        bank_stocks[ticker]["Close"].plot(
+            kind="line", figsize=(12, 6), label=ticker)
+    plt.legend()
+    plt.show()
 
-    
