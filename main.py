@@ -105,56 +105,5 @@ if __name__ == "__main__":
                  color="red", bins=100)
     plt.show()
 
-    ##
-    bank_stocks.xs(key="Close", axis=1, level=1).head()
 
-    ## Plot stock close prices
-    sns.set(style="whitegrid", rc={'figure.figsize': (13, 7)})
-    for ticker in tickers:
-        bank_stocks[ticker]["Close"].plot(
-            kind="line", figsize=(12, 6), label=ticker)
-    plt.legend()
-    plt.show()
-
-    ## Interative close price stocks
-    bank_stocks.xs(key="Close", axis=1, level=1).iplot()
-
-    ## interative MMA plot
-    sns.set(style="whitegrid")
-    bank_stocks["BAC"]["Close"].loc["2011-01-01":"2011-12-31"].rolling(
-        window=30).mean().plot(label="MMA 30")
-    bank_stocks["BAC"]["Close"].loc["2011-01-01":"2011-12-31"].plot(
-        label="BAC CLOSE", color="green")
-    plt.legend()
-    plt.show()
-
-    ## Heatmap stock correlation
-    sns.heatmap(bank_stocks.xs(key="Close", axis=1, level=1).corr(),
-                annot=True, cmap="rocket_r")
-    plt.legend()
-    plt.show()
-
-    ## Cluster stock correlation
-    sns.clustermap(bank_stocks.xs(key="Close", axis=1,
-                                  level=1).corr(), annot=True, cmap="rocket_r")
-    plt.legend()
-    plt.show()
-
-    ## Interative Heatmap stock correlation
-    bank_stocks.xs(key="Close", axis=1, level=1).corr().iplot(
-        kind="heatmap", colorscale='rdylbu')
-    plt.show()
-
-    ## Interative Candle graph
-    bank_stocks["BAC"].loc["2015-01-01":"2016-01-01"].iplot(kind="candle")
-    plt.show()
-
-    ## Interactive MMA graph plot
-    bank_stocks["MS"]["Close"].loc["2015-01-01":
-                                   "2015-12-31"].ta_plot(study="sma")
-    plt.show()
-
-    ## Interactive Bollinger`s Band graph
-    bank_stocks["BAC"]["Close"].loc["2015-01-01":
-                                    "2015-12-31"].ta_plot(study="boll", color="red")
-    plt.show()
+    
