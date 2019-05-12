@@ -1,0 +1,38 @@
+
+Todo:
+  ✔ Figure out how to get the stock data. @done(19-05-05 03:54)
+    From Jan 1st 2006 to Jan 1st 2016 for each bank
+  ✔ Set each bank to be a separate dataframe, with the variable name for that bank being its ticker symbol. This will involve a few steps:** @done(19-05-11 18:44)
+    ✔ 1. Use datetime to set start and end datetime objects. @done(19-05-11 18:44)
+    ✔ 2. Figure out the ticker symbol for each bank. @done(19-05-11 18:44)
+    ✔ 3. Figure out how to use datareader to grab info on the stock. @done(19-05-11 18:44)
+  ✔ Create a list of the ticker symbols (as strings) in alphabetical order. Call this list: tickers @done(19-05-11 18:45)
+  ✔ Use pd.concat to concatenate the bank dataframes together to a single data frame called bank_stocks. @done(19-05-11 18:45)
+    ✔ Set the keys argument equal to the tickers list @done(19-05-12 04:12)
+      Also pay attention to what axis you concatenate on.
+  ✔ Set the column name levels @done(19-05-12 04:12)
+  ✔ Check the head of the bank_stocks dataframe @done(19-05-12 04:12)
+  EDA
+  ✔ What is the max Close price for each bank's stock throughout the time period? @done(19-05-12 04:12)
+  ✔ Create a new empty DataFrame called returns. @done(19-05-12 04:13)
+  ✔ This dataframe will contain the returns for each bank's stock. returns are typically defined by: @done(19-05-12 04:13)
+  ✔ We can use pandas pct_change() method on the Close column to create a column representing this return value. @done(19-05-12 04:18)
+  ✔ Create a for loop that goes and for each Bank Stock Ticker creates this returns column and set's it as a column in the returns DataFrame @done(19-05-12 04:18)
+  ✔  Create a pairplot using seaborn of the returns dataframe. What stock stands out to you? @done(19-05-12 04:18)
+    Can you figure out why?
+  ✔ Using this returns DataFrame, figure out on what dates each bank stock had the best and worst single day returns @done(19-05-12 04:24)
+    You should notice that 4 of the banks share the same day for the worst drop, did anything significant happen that day?
+  ✔ You should have noticed that Citigroup's largest drop and biggest gain were very close to one another, did anythign significant happen in that time frame? @done(19-05-12 04:24)
+  ✔ Take a look at the standard deviation of the returns, which stock would you classify as the riskiest over the entire time period? @done(19-05-12 04:24)
+    Which would you classify as the riskiest for the year 2015?
+  ✔ Create a distplot using seaborn of the 2015 returns for Morgan Stanley @done(19-05-12 04:24)
+  ✔ Create a distplot using seaborn of the 2008 returns for CitiGroup @done(19-05-12 04:24)
+  More Visualization
+  ✔ Create a line plot showing Close price for each bank for the entire index of time @done(19-05-12 04:24)
+    (Hint: Try using a for loop, or use .xs to get a cross section of the data.)
+  ✔ Plot the rolling 30 day average against the Close Price for Bank Of America's stock for the year 2008 @done(19-05-12 04:24)
+  ✔ Optional: Use seaborn's clustermap to cluster the correlations together @done(19-05-12 04:25)
+  Part 2 (Optional)
+  ✔ Use .iplot(kind='candle) to create a candle plot of Bank of America's stock from Jan 1st 2015 to Jan 1st 2016 @done(19-05-12 04:26)
+  ✔ Use .ta_plot(study='sma') to create a Simple Moving Averages plot of Morgan Stanley for the year 2015 @done(19-05-12 04:26)
+  ✔ Use .ta_plot(study='boll') to create a Bollinger Band Plot for Bank of America for the year 2015 @done(19-05-12 04:26)
