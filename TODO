@@ -8,12 +8,12 @@ Todo:
     ✔ 3. Figure out how to use datareader to grab info on the stock. @done(19-05-11 18:44)
   ✔ Create a list of the ticker symbols (as strings) in alphabetical order. Call this list: tickers @done(19-05-11 18:45)
   ✔ Use pd.concat to concatenate the bank dataframes together to a single data frame called bank_stocks. @done(19-05-11 18:45)
-    ☐ Set the keys argument equal to the tickers list
-      ☐ Also pay attention to what axis you concatenate on.
-  ☐ Set the column name levels
-  ☐ Check the head of the bank_stocks dataframe
-  ☐ EDA
-  ☐ What is the max Close price for each bank's stock throughout the time period?
+    ✔ Set the keys argument equal to the tickers list @done(19-05-12 04:12)
+      Also pay attention to what axis you concatenate on.
+  ✔ Set the column name levels @done(19-05-12 04:12)
+  ✔ Check the head of the bank_stocks dataframe @done(19-05-12 04:12)
+  EDA
+  ✔ What is the max Close price for each bank's stock throughout the time period? @done(19-05-12 04:12)
   ☐ Create a new empty DataFrame called returns.
   ☐ This dataframe will contain the returns for each bank's stock. returns are typically defined by:
   ☐ We can use pandas pct_change() method on the Close column to create a column representing this return value.

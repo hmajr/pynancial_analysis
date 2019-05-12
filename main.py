@@ -62,4 +62,12 @@ if __name__ == "__main__":
     #Check data frame
     print(bank_stocks.head())
 
+    ##
+    # EDA
+    ##
+
+    #Max close
+    print("\n== Max close price ==\n")
+    print(bank_stocks.xs(key="Close", axis=1, level="Stock Info").max())
+
     
